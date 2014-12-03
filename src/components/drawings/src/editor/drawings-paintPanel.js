@@ -58,7 +58,7 @@ Drawings.PaintPanel.prototype = {
         toolbar.append('<div id="load" class="button load" title="Загрузить"></div>');
         toolbar.append('<input id="fileInput" type="file">');
         toolbar.append('<div id="editButton" class="button edit" title="Редактировать"></div>');
-        toolbar.append('<div id="pushButton" class="button push" title="Синхронизация"></div>');
+        //toolbar.append('<div id="pushButton" class="button push" title="Синхронизация"></div>');
 
         $('#pointButton').click(function () {
             paintPanel.controller.modify = false;
@@ -108,10 +108,10 @@ Drawings.PaintPanel.prototype = {
         $('#editButton').click(function () {
             paintPanel.controller.modify = true;
         });
-
-        $('#pushButton').click(function () {
-            paintPanel._push();
-        });
+//
+//        $('#pushButton').click(function () {
+//            paintPanel._push();
+//        });
 
         // initialize board
         editor.append('<div id="board" class="board jxgbox"></div>');
@@ -125,9 +125,9 @@ Drawings.PaintPanel.prototype = {
         this.model.clear();
     },
 
-    _push: function () {
-	this.model.translateToBase();
-    },
+//    _push: function () {
+//	this.model.translateToBase();
+//    },
 
     _saveToFile: function () {
         var json = Drawings.JsonTranslator.toJson(this.model);
