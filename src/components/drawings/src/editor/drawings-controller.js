@@ -4,7 +4,7 @@
 
 Drawings.Controller = function (paintPanel, model) {
     this.paintPanel = paintPanel;
-	model.paintPanel = paintPanel;
+	//model.paintPanel = paintPanel;
     this.model = model;
     this.modify = false;
 };
